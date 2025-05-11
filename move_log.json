@@ -1,62 +1,17 @@
 [
     {
-        "from": 1,
-        "to": 2,
-        "type": "simple"
-    },
-    {
-        "from": 3,
-        "to": 1,
-        "type": "jump"
-    },
-    {
-        "from": 2,
-        "to": 3,
-        "type": "simple"
-    },
-    {
-        "from": 4,
-        "to": 2,
-        "type": "jump"
-    },
-    {
-        "from": 3,
-        "to": 4,
-        "type": "simple"
-    },
-    {
-        "from": 2,
-        "to": 3,
-        "type": "simple"
-    },
-    {
         "from": 0,
-        "to": 2,
-        "type": "jump"
+        "to": 1,
+        "type": "simple"
     },
     {
-        "from": 1,
+        "from": 2,
         "to": 0,
-        "type": "simple"
-    },
-    {
-        "from": 2,
-        "to": 1,
-        "type": "simple"
-    },
-    {
-        "from": 3,
-        "to": 2,
-        "type": "simple"
-    },
-    {
-        "from": 1,
-        "to": 3,
         "type": "jump"
     },
     {
-        "from": 2,
-        "to": 1,
+        "from": 1,
+        "to": 2,
         "type": "simple"
     }
 ]
