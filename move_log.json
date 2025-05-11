@@ -48,5 +48,25 @@
         "from": 2,
         "to": 3,
         "type": "simple"
+    },
+    {
+        "session_id": "8485006c-cdfc-4174-b2aa-b1dfd8a758f8",
+        "movements": [
+            {
+                "from": 0,
+                "to": 1,
+                "type": "simple"
+            },
+            {
+                "from": 2,
+                "to": 0,
+                "type": "jump"
+            },
+            {
+                "from": 1,
+                "to": 2,
+                "type": "simple"
+            }
+        ]
     }
 ]
