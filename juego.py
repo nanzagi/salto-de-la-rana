@@ -4,7 +4,40 @@ from tkinter import messagebox, simpledialog
 from PIL import Image, ImageTk  # Necesario para usar imágenes en los botones
 import json
 import subprocess
+import uuid  # Para generar identificadores únicos para cada sesión
 
+def export_moves_to_github():
+    """Exporta los movimientos a un archivo y lo sube a GitHub automáticamente."""
+    # Generar un identificador único para la sesión
+    session_id = str(uuid.uuid4())
+
+    # Leer el archivo JSON existente (si existe)
+    try:
+        with open("move_log.json", "r") as file:
+            all_sessions = json.load(file)
+    except FileNotFoundError:
+        # Si el archivo no existe, inicializar una lista vacía
+        all_sessions = []
+
+    # Agregar los movimientos de la sesión actual
+    session_data = {
+        "session_id": session_id,
+        "movements": move_log
+    }
+    all_sessions.append(session_data)
+
+    # Guardar los movimientos actualizados en el archivo JSON
+    with open("move_log.json", "w") as file:
+        json.dump(all_sessions, file, indent=4)
+
+    # Subir el archivo a GitHub
+    try:
+        subprocess.run(["git", "add", "move_log.json"], check=True)
+        subprocess.run(["git", "commit", "-m", "Registro de movimientos del juego"], check=True)
+        subprocess.run(["git", "push"], check=True)
+        print("Movimientos exportados y subidos a GitHub correctamente.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error al subir a GitHub: {e}")
 # Cambiar al directorio donde están las imágenes
 os.chdir("c:/Users/usuario/Documents/salto")
 
@@ -64,9 +97,27 @@ def is_game_won(board, n):
 
 def export_moves_to_github():
     """Exporta los movimientos a un archivo y lo sube a GitHub automáticamente."""
-    # Guardar los movimientos en un archivo JSON
+    # Generar un identificador único para la sesión
+    session_id = str(uuid.uuid4())
+
+    # Leer el archivo JSON existente (si existe)
+    try:
+        with open("move_log.json", "r") as file:
+            all_sessions = json.load(file)
+    except FileNotFoundError:
+        # Si el archivo no existe, inicializar una lista vacía
+        all_sessions = []
+
+    # Agregar los movimientos de la sesión actual
+    session_data = {
+        "session_id": session_id,
+        "movements": move_log
+    }
+    all_sessions.append(session_data)
+
+    # Guardar los movimientos actualizados en el archivo JSON
     with open("move_log.json", "w") as file:
-        json.dump(move_log, file, indent=4)
+        json.dump(all_sessions, file, indent=4)
 
     # Subir el archivo a GitHub
     try:
