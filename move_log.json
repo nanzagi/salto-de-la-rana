@@ -108,5 +108,25 @@
                 "type": "simple"
             }
         ]
+    },
+    {
+        "session_id": "faf854d4-0eb9-499f-81b7-1a8aa37ff810",
+        "movements": [
+            {
+                "from": 0,
+                "to": 1,
+                "type": "simple"
+            },
+            {
+                "from": 2,
+                "to": 0,
+                "type": "jump"
+            },
+            {
+                "from": 1,
+                "to": 2,
+                "type": "simple"
+            }
+        ]
     }
 ]
