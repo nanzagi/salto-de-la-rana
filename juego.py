@@ -39,8 +39,11 @@ def export_moves_to_github():
     except subprocess.CalledProcessError as e:
         print(f"Error al subir a GitHub: {e}")
 # Cambiar al directorio donde están las imágenes
-os.chdir("c:/Users/usuario/Documents/salto")
+base_path = os.path.dirname(os.path.abspath(__file__))
 
+# Construir rutas relativas para las imágenes
+green_frog_path = os.path.join(base_path, "green_frog.png")
+red_frog_path = os.path.join(base_path, "red_frog.png")
 # Lista para registrar los movimientos
 move_log = []
 
