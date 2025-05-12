@@ -1,0 +1,32 @@
+[
+    {
+        "session_id": "9d6eebbe-c653-4bc6-83ed-865cf0e9d6bf",
+        "movements": [
+            {
+                "from": 0,
+                "to": 1,
+                "type": "simple"
+            },
+            {
+                "from": 1,
+                "to": 0,
+                "type": "simple"
+            },
+            {
+                "from": 2,
+                "to": 1,
+                "type": "simple"
+            },
+            {
+                "from": 0,
+                "to": 2,
+                "type": "jump"
+            },
+            {
+                "from": 1,
+                "to": 0,
+                "type": "simple"
+            }
+        ]
+    }
+]
