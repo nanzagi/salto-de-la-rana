@@ -168,5 +168,25 @@
                 "type": "simple"
             }
         ]
+    },
+    {
+        "session_id": "e2bbec02-d6b3-4de9-9828-c019846862cf",
+        "movements": [
+            {
+                "from": 0,
+                "to": 1,
+                "type": "simple"
+            },
+            {
+                "from": 2,
+                "to": 0,
+                "type": "jump"
+            },
+            {
+                "from": 1,
+                "to": 2,
+                "type": "simple"
+            }
+        ]
     }
 ]
